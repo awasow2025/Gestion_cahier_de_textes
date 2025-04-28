@@ -1,151 +1,95 @@
-# Gestion de Cahier de texte
+# Développement d'une application de gestion numérique du cahier de texte
 
+## 1. Université Iba Der Thiam de Thiès
+### UFR SET Département Informatique
+### Licence 2 Informatique - Programmation Orientée Objet Java
 
+### A. Intitulé du projet
+Développement d'une application de gestion numérique du cahier de texte avec génération d'une fiche pédagogique.
 
-## Diagramme de cas d'utilisation 
-### Cas d'Utilisation : Gestion numérique du cahier de texte avec génération de fiches pédagogiques
-## Acteurs :
-- Chef de département
+### B. Contexte et justification
+Le cahier de texte est un outil essentiel dans le suivi des activités pédagogiques, la planification des cours et la communication entre enseignants et administration. L'objectif est de dématérialiser ce cahier sous forme d'une application accessible à trois profils d'utilisateurs.
 
-- Enseignant
+### C. Objectifs du projet
+- Offrir au chef de département une vue globale sur les contenus.
+- Faciliter au responsable de classe la consultation et la validation des tâches planifiées.
+- Permettre aux enseignants une génération rapide de la fiche de suivi pédagogique.
 
-- Responsable de classe
+### D. Utilisateurs et rôles
 
-## Cas d'utilisation :
-1. **Chef de département**
+| Utilisateurs          | Rôles et fonctionnalités                                             |
+|-----------------------|--------------------------------------------------------------------|
+| **Chef de département** | Ajouter des enseignants et des responsables de classe. Assigner un/des cours à un enseignant. Générer une fiche de suivi pédagogique. |
+| **Enseignant**          | Voir la liste de ses cours. Ajouter une séance et ajouter les informations relatives à la séance (contenu). |
+| **Responsable de classe** | Consulter le cahier de texte. Valider le contenu ajouté par l'enseignant. |
 
-**Description** : Le chef de département gère les utilisateurs et supervise l'attribution des cours.
+### E. Technologies proposées
+- **Langage** : Java (Swing ou JavaFX pour l'interface)
+- **Base de données** : MySQL ou SQLite
+- **IDE** : IntelliJ IDEA, Eclipse ou VSCODE
+- **Gestion de projet** : GitHub
 
-- Ajouter des enseignants et des responsables de classe
+### F. Fonctionnalités communes
+- **Authentification par rôle.**
+- **Gestion des utilisateurs et attribution des droits.**
+- **Interface pour la saisie et la consultation du cahier de texte.**
+- **Visualisation des séances.**
+- **Export des fiches de suivi (PDF ou Excel).**
 
-   - Pré-condition : Le chef de département doit être authentifié.
+### G. Planning prévisionnel
+Le projet est à présenter le **vendredi 18 Avril à 08h 00mn**.
 
-   - Action : Le chef de département peut ajouter de nouveaux enseignants et responsables de classe dans le système.
+### H. Livrables attendus
+- Application fonctionnelle exécutable.
+- Fichier `readme.md`.
 
-   - Post-condition : Les utilisateurs ajoutés sont désormais disponibles dans le système.
+### I. Composition des équipes
+Le projet se fait par équipe de deux ou en individuel.
 
-- Assigner un/des cours à un enseignant
+## 2. Dossier `images`
 
-   - Pré-condition : L'enseignant doit être enregistré dans le système.
+Les images utilisées dans ce projet sont stockées dans le dossier `images`. Voici les images à insérer :
 
-   - Action : Le chef de département assigne des cours spécifiques à chaque enseignant.
+1. **Vue globale de l'application**  
+   ![Vue globale de l'application](images/vue_globale.png)
 
-   - Post-condition : Les enseignants ont les cours qui leur sont affectés.
+2. **Interface utilisateur - Chef de département**  
+   ![Interface utilisateur - Chef de département](images/chef_departement.png)
 
-- Générer une fiche de suivi pédagogique
+3. **Interface utilisateur - Enseignant**  
+   ![Interface utilisateur - Enseignant](images/enseignant.png)
 
-    - Pré-condition : Le chef de département doit avoir une vue d'ensemble des cours enseignés.
+4. **Interface utilisateur - Responsable de classe**  
+   ![Interface utilisateur - Responsable de classe](images/responsable_classe.png)
 
-    - Action : Le chef de département génère une fiche de suivi pédagogique en fonction des informations de cours et de leurs progressions.
+---
 
-    - Post-condition : Une fiche de suivi est générée et disponible en format PDF ou Excel.
+### Installation
+1. Clonez le repository sur votre machine locale :
+    ```bash
+    git clone https://github.com/username/projet-cahier-texte.git
+    ```
 
-2. **Enseignant**
-**Description** : L'enseignant est responsable de la saisie des informations liées aux cours et de la génération des fiches pédagogiques.
+2. Allez dans le répertoire du projet :
+    ```bash
+    cd projet-cahier-texte
+    ```
 
-- Voir la liste de ses cours
+3. Ouvrez le projet dans votre IDE préféré (IntelliJ IDEA, Eclipse, etc.).
 
-     - Pré-condition : L'enseignant doit être authentifié dans le système.
+4. Configurez la base de données et l'application selon les instructions ci-dessous.
 
-     - Action : L'enseignant consulte la liste de ses cours assignés, qui est affichée dans l'application.
+---
 
-    - Post-condition : L'enseignant voit ses cours dans une interface conviviale.
+### Configuration de la base de données
+- Créez une base de données MySQL ou SQLite.
+- Importez le fichier SQL fourni dans le dossier `gestion_cahiers_textes.sql` pour configurer les tables nécessaires.
 
-- Ajouter une séance
+### Lancer l'application
+Pour lancer l'application, ouvrez le fichier `Gestion_Cahiers_Textes.java` et exécutez-le dans votre IDE. Vous pouvez également exécuter le projet via la ligne de commande.
 
-    - Pré-condition : L'enseignant doit être authentifié et avoir accès aux cours qui lui sont assignés.
+---
 
-    - Action : L'enseignant ajoute une nouvelle séance avec les informations nécessaires (date, contenu, etc.).
-
-    - Post-condition : La séance est enregistrée dans le système.
-
-- Ajouter des informations relatives à la séance
-
-    - Pré-condition : L'enseignant doit être dans la section de la séance qu'il souhaite modifier.
-
-    - Action : L'enseignant ajoute des détails supplémentaires pour chaque séance, comme le contenu, les objectifs, etc.
-
-    - Post-condition : Les informations sont enregistrées et accessibles pour consultation.
-
-3. **Responsable de classe**
-**Description** : Le responsable de classe est chargé de superviser le contenu ajouté par l'enseignant et de valider les informations.
-
-- Consulter le cahier de texte
-
-    - Pré-condition : Le responsable de classe doit être authentifié dans le système.
-
-    - Action : Le responsable de classe accède à la liste des tâches et séances planifiées pour chaque classe sous sa responsabilité.
-
-    - Post-condition : Le responsable de classe a accès aux informations complètes sur le cahier de texte de la classe.
-
-- Valider le contenu ajouté par l'enseignant
-
-     - Pré-condition : Le responsable de classe doit avoir accès aux séances ajoutées par les enseignants.
-
-     - Action : Le responsable de classe examine les informations ajoutées par l'enseignant et valide ou demande des modifications.
-
-    - Post-condition : Le contenu est validé ou modifié selon les retours du responsable de classe.
-
-## Fonctionnalités communes :
-**Authentification par rôle** : L'application vérifie le rôle de l'utilisateur et lui permet d'accéder aux fonctionnalités spécifiques à son rôle.
-
-**Gestion des utilisateurs et attribution des droits** : Les administrateurs peuvent gérer les utilisateurs et attribuer des rôles (chef de département, enseignant, responsable de classe).
-
-**Interface pour la saisie et la consultation du cahier de texte** : L'application permet la saisie de contenu pédagogique et la consultation des informations planifiées.
-
-**Visualisation des séances** : Les utilisateurs peuvent consulter les séances programmées, leurs contenus et leurs objectifs.
-
-**Export des fiches de suivi** : Les fiches pédagogiques peuvent être exportées sous différents formats, comme PDF ou Excel, pour un suivi externe.
-
-**Scénarios d'usage** :
-1. **Chef de département** se connecte et ajoute un **enseignant**.
-
-2. **Enseignant** se connecte, voit ses cours, ajoute une nouvelle séance et renseigne les détails de la séance.
-
-3. **Responsable de classe** se connecte, consulte le cahier de texte et valide les séances ajoutées par l'enseignant.
-
-4. **Chef de département** génère une fiche de suivi pédagogique pour l'ensemble des cours.
-
-## Diagramme de cas d'utilisation (Description textuelle) :
-- Acteur : Chef de département, Enseignant, Responsable de classe
-
-    - Cas d'utilisation :
-
-       - Ajouter des utilisateurs
-
-       - Assigner des cours
-
-       - Générer des fiches de suivi
-
-       - Voir la liste de ses cours
-
-       - Ajouter des séances et des informations
-
-       - Valider les séances
-
-       - Consulter le cahier de texte
-
-       - Authentification
-## Architecture du projet 
-```
-gestion-cahier-texte/
-├── docs/
-│   ├── README.md                  # Documentation du projet
-│   ├── UML_Diagram.md             # Diagrammes UML et architecture du système
-├── src/                           # Code source de l'application
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── projet/
-│   │   │   │   │   ├── controller/ # Contrôleurs de l'application
-│   │   │   │   │   ├── model/      # Modèles de données
-│   │   │   │   │   ├── view/       # Interfaces utilisateur (JavaFX ou Swing)
-├── lib/                            # Librairies et dépendances tierces
-├── resources/                      # Fichiers de configuration (par ex., fichiers XML, JSON)
-├── tests/                          # Tests unitaires
-│   ├── test/                       # Tests d'unités et d'intégration
-│   │   ├── TestController.java
-├── pom.xml                         # Fichier de configuration Maven
-├── .gitignore                      # Fichier .gitignore
-```
-@
+### Auteurs
+- **Awa Sow** - Développeur Principal
+- **Issa Ba** - Collaborateur
