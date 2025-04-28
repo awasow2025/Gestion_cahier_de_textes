@@ -67,12 +67,12 @@ Les images utilisées dans ce projet sont stockées dans le dossier `images`. Vo
 ### Installation
 1. Clonez le repository sur votre machine locale :
     ```bash
-    git clone https://github.com/username/projet-cahier-texte.git
+    git clone https://github.com/awasow2025/Gestion_cahier_de_textes
     ```
 
 2. Allez dans le répertoire du projet :
     ```bash
-    cd projet-cahier-texte
+    cd Gestion_cahier_de_textes
     ```
 
 3. Ouvrez le projet dans votre IDE préféré (IntelliJ IDEA, Eclipse, etc.).
