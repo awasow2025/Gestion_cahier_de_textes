@@ -51,16 +51,16 @@ Le projet se fait par équipe de deux ou en individuel.
 Les images utilisées dans ce projet sont stockées dans le dossier `images`. Voici les images à insérer :
 
 1. **Vue globale de l'application**  
-   ![Vue globale de l'application](images/vue_globale.png)
+   ![Vue globale de l'application](Gestion_cahier_de_textes/images/vue_globale.png)
 
 2. **Interface utilisateur - Chef de département**  
-   ![Interface utilisateur - Chef de département](images/chef_departement.png)
+   ![Interface utilisateur - Chef de département](Gestion_cahier_de_textes/images/chef_departement.png)
 
 3. **Interface utilisateur - Enseignant**  
-   ![Interface utilisateur - Enseignant](images/enseignant.png)
+   ![Interface utilisateur - Enseignant](Gestion_cahier_de_textes/images/enseignant.png)
 
 4. **Interface utilisateur - Responsable de classe**  
-   ![Interface utilisateur - Responsable de classe](images/responsable_classe.png)
+   ![Interface utilisateur - Responsable de classe](Gestion_cahier_de_textes/images/responsable_classe.png)
 
 ---
 
